@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import InputForm from "@/components/InputForm";
 import StreamingResult from "@/components/StreamingResult";
 import { useStreamingGeneration } from "@/hooks/useStreamingGeneration";
@@ -25,17 +26,16 @@ export default function Home() {
       <header className="bg-white/80 backdrop-blur-sm border-b border-slate-100 sticky top-0 z-50">
         <div className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-violet-600 flex items-center justify-center">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-              </svg>
-            </div>
+            <Image
+              src="/agyle-logo.png"
+              alt="Agyle"
+              width={32}
+              height={32}
+              className="rounded-lg"
+            />
             <div>
               <h1 className="text-base font-bold text-slate-900 leading-tight">MeetPrep</h1>
-              <p className="text-[10px] text-slate-400 leading-tight">AI meeting voorbereiding</p>
+              <p className="text-[10px] text-slate-400 leading-tight">by Agyle</p>
             </div>
           </div>
           {remaining !== null && (
@@ -184,9 +184,18 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-slate-100 mt-8">
         <div className="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
-          <span className="text-xs text-slate-300">
-            Made by <span className="text-slate-400 font-medium">Agyle</span>
-          </span>
+          <div className="flex items-center gap-2">
+            <Image
+              src="/agyle-logo.png"
+              alt="Agyle"
+              width={20}
+              height={20}
+              className="opacity-40"
+            />
+            <span className="text-xs text-slate-300">
+              Made by <span className="text-slate-400 font-medium">Agyle</span> — AI Implementatie &amp; Automatisering
+            </span>
+          </div>
           <span className="text-xs text-slate-300">
             Powered by Claude AI
           </span>
