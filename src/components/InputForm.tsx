@@ -35,7 +35,7 @@ export default function InputForm({ onSubmit, isLoading }: InputFormProps) {
             type="text"
             value={company}
             onChange={(e) => setCompany(e.target.value)}
-            placeholder="bijv. EKB Groep"
+            placeholder="bijv. Agyle BV"
             className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 text-sm placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-400 focus:bg-white transition"
             disabled={isLoading}
           />
@@ -52,7 +52,7 @@ export default function InputForm({ onSubmit, isLoading }: InputFormProps) {
             id="persons"
             value={personsText}
             onChange={(e) => setPersonsText(e.target.value)}
-            placeholder="Michiel de Lange, Harm Fröling, Bart Koopman"
+            placeholder="bijv. Abdul Malik"
             rows={2}
             className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 text-sm placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-400 focus:bg-white transition resize-none"
             disabled={isLoading}
